@@ -1,0 +1,21 @@
+{% extends "base.html"%}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/homeStyle.css')}}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <header class="hero-header">
+      <h1 class="hero-title">The Chad Program</h1>
+      <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The way to make you better</h6>
+    </header>
+</section>
+  <article>
+    <h2>About GigaChad</h2>
+    <p>GigaChad is a nickname associated with the art project berlin. In modern internet slang, is generally a sexually active "alpha male". The term has become a slang term across the internet and among adolescents in general to refer to particularly attractive or confident men.</p>
+    <h2>Our Plan</h2>
+    <p>It’s natural to wish you could change something in your appearance. Different chin, better hairline, ears that don’t stick out.  People spend billions of dollars each year on plastic surgery, and nearly twice as much on health and fitness. Photo apps are stuffed with filters and tools that brighten your eyes and clear your complexion.</p>
+    <p>But maybe, if we confront the terminal outcome of pushing toward an intense and narrow idea of visible perfection, we will come to recognize how wrong our baseline assumptions are. </p>
+  </article>
+
+{% endblock %}

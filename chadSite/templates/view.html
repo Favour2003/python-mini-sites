@@ -1,0 +1,38 @@
+{% extends "base.html"%}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/viewStyles.css')}}">
+{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages%}
+                <p>{{msg}}</p>
+            {% endfor%}
+        {% endif %}
+    {% endwith%}
+
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>password</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in values %}
+                    <tr>
+                        <td>{{item.name}}</td>
+                        <td>{{item.username}}</td>
+                        <td>{{item.password}}</td>
+                        <td>Chad</td>
+                    </tr>
+                {% endfor %}  
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

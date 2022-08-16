@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/loginStyle.css')}}">
+    <script src="{{ url_for('static', filename='javascript/loginJavascript.js')}}"></script>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <div class="form-structor">
+            <div class="signup">
+                <h2 class="form-title" id="signup">Chad Program</h2>
+                <div class="form-holder">
+                    <input type="text" class="input" placeholder="Name" name="nm" />
+                    <input type="text" class="input" placeholder="Username" name="uname" />
+                    <input type="password" class="input" placeholder="Password" name="pwd" />
+                </div>
+                <button class="submit-btn" name="submit-btn" value="sign-up">Sign up</button>
+                <div class="esito">
+                    <center>{% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                        {% for msg in messages%}
+                        <p>{{msg}}</p>
+                        {% endfor%}
+                        {% endif %}
+                        {% endwith%}
+                    </center>                     
+                </div>
+            </div>
+            <div class="login slide-up">
+                <div class="center">
+                    <h2 class="form-title" id="login"><span>or</span>Log in</h2>
+                    <div class="form-holder">
+                        <input type="text" class="input" placeholder="Username" name="unm"/>
+                        <input type="password" class="input" placeholder="Password" name="pass"/>
+                    </div>
+                    <button class="submit-btn" name="submit-btn" value="login">Log in</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>
+
+</html>
